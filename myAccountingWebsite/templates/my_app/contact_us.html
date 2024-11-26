@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "my_app/base.html" %}
+    {% block body_block %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>SEND US A MESSAGE</h3>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Your Name: </label>
+                                {{ form.name }}                               
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Email address</label>
+                                {{ form.email }}
+                              </div>
+                              <div class="mb-3">
+                                  <label for="floatingTextarea">Your Message</label>
+                                  {{ form.message }}
+                              </div>
+
+
+                            <div class="form-action">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+
+                </div>
+                <div class="col-md-6">
+                    <h3>SCHEDULE A PHONE CALL</h3>
+                    <h5>Get Started Today</h5>
+                    <p>Ready to simplify your bookkeeping, payroll, and tax preparation? Let’s talk! Contact us today for a 
+                    consultation and discover how we can support your business’s success.</p>
+                    <div class="d-grid gap-2 col-3 mx-auto">
+                        <a href="https://calendly.com/plemmonsbookkeeping/bookkeeping-consultation" target="_blank" <button class="btn btn-outline-primary" type="button">Book Appointment</button></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    {% endblock %}

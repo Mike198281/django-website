@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Plemmons Bookkeeping Services</title>
+        <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+        <link href="{% static "css/style.css" %}" rel="stylesheet">
+        <script src="{% static "js/bootstrap.bundle.js" %}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'index' %}"> <img src="{% static "images/logo-svg.svg" %}" alt="My logo" width="100" height="80"></a>              
+            </div>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse justify-content-end nav" id="navbarNavDropdown">
+                <div class="navbar-nav">
+                <a class="nav-link" style="color:blue;" href="{% url 'my_app:about' %}">About</a>
+                <a class="nav-link" style="color:blue;" href="{% url 'my_app:services' %}">Services</a>
+                <a class="nav-link" style="color:blue;" href="{% url 'my_app:contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+            
+            </div>
+        </nav>
+        <div class="container">
+
+            {% block body_block %}          
+
+            {% endblock %}
+
+        </div>
+        <footer class="boxy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="column">
+                              <img src="{% static "images/quickbooks-online-certification-level-1.png" %}" alt="My badge" style="width:100%">
+                            </div>
+                            <div class="column">
+                              <img src="{% static "images/quickbooks-online-certification-level-2.png" %}" alt="My badge" style="width:100%">
+                            </div>
+                            <div class="column">
+                              <img src="{% static "images/quickbooks-online-payroll-certification.png" %}" alt="My badge" style="width:100%">
+                            </div>
+                            <div class="column">
+                                <img src="{% static "images/eFile Scanner Printing.jpg" %}" alt="My CTEC logo" style="height:100%; width:120%;">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact">
+                            <h3>Contact Us</h3>
+                            <h6>Plemmons Bookkeeping Services</h6>
+                            <h6>Weed, California</h6>
+                            <h6><a href="tel:5309251346">530-925-1346</a></h6>
+                            <h6>plemmonsbookkeeping@gmail.com</h6>
+                        </div>
+                        
+                            
+                    </div>
+                </div>
+            </div>
+        </footer>
+      
+        
+    </body>
+</html>

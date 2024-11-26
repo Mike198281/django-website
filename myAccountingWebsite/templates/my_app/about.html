@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "my_app/base.html" %}
+{% load static %}
+    {% block body_block %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{% static "images/20240928_1700271.jpg" %}" alt="My logo" width="70%" height="70%" style ="margin-left:15%;margin-top:10%">
+                </div>
+                <div class="col-lg-6">
+                    <h1>About Mike</h1>
+                    <p>Hello! I'm Michael Plemmons, the founder and lead bookkeeper here at Plemmons Bookkeeping Services. With a strong foundation 
+                    in both technology and finance, I hold bachelor's degrees in Computer Science and Accounting, which allows me to offer a 
+                    unique approach to managing your business's finances.</p>
+
+                    <p>Based in Weed, California, I bring a blend of precision, problem-solving skills, and a passion for helping small businesses 
+                    thrive. As a single father raising my daughter, I understand the importance of balance—whether in life or in your books. 
+                    I work diligently to ensure that your finances are accurate, organized, and ready to support your business goals.</p>
+
+                    <p>When I'm not crunching numbers or optimizing financial systems, you can find me playing guitar—one of my favorite ways to 
+                    unwind. Whether you're a startup, a growing business, or simply need reliable bookkeeping services, I’m here to help you 
+                    navigate the financial side of your business with confidence.</p>
+                </div>
+            </div>
+
+        </div>
+
+    {% endblock %}
